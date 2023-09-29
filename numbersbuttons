@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Counter</title>
+</head>
+<body>
+    <!-- Butonları içerecek bir konteyner div ekleyin -->
+    <div id="button-container"></div>
+
+    <script>
+        // Butonları içerecek konteyneri seçin
+        var buttonContainer = document.getElementById('button-container');
+
+        // Buton sayısı
+        var buttonCount = 20;
+
+        // Her bir butonu oluşturun ve konteynere ekleyin
+        for (var i = 1; i <= buttonCount; i++) {
+            var button = document.createElement('button');
+            button.textContent = 'Buton ' + i;
+
+            // Butona tıklanınca ilgili buton numarasını gösteren bir işlevi tetikleyin
+            button.addEventListener('click', function() {
+                alert('Buton ' + i);
+            });
+
+            // Butonu konteynere ekleyin
+            buttonContainer.appendChild(button);
+        }
+    </script>
+</body>
+</html>
